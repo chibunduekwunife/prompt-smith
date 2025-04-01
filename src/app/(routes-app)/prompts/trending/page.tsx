@@ -1,7 +1,7 @@
 export default function PromptsPage() {
     return (
         <div>
-            <p>View All Prompts</p>
+            <p>View Trending Prompts</p>
         </div>
     )
 }

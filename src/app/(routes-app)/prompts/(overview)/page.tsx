@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
 
 import {
+    promptFolders,
+    sortOptions,
+    prompts
+} from '@/app/lib/data'
+
+import {
     FolderIcon,
     EllipsisVerticalIcon,
     DocumentTextIcon,
@@ -16,26 +22,6 @@ export const metadata: Metadata = {
         "and test potential outputs with different AI models",
 }
 
-//move to database
-const folders = [
-    {name: "Example Folder", href: "/prompts/examplefolder"},
-    {name: "Spicy Cats", href: "/prompts/spicsds"},
-    {name: "ChatGPT Prompts", href: "/prompts/chat"},
-    {name: "Free Prompts AI", href: "/prompts/snlds"},
-]
-
-const options = [
-    {name: "Title (A-Z)", value: "TitleAsc"},
-    {name: "Title (Z-A)", value: "TitleDesc"},
-    {name: "Date added (Oldest First)", value: "DateAddedOldest"},
-    {name: "Date added (Newest First)", value: "DateAddedNewest"}
-]
-
-const prompts = [
-    {name: "My First Ever Prompt :)", href: "/", dateCreated: "4/5/2020"},
-    {name: "My Second Ever Prompt :)", href: "/", dateCreated: "9/15/2040"},
-    {name: "My Third Ever Prompt :)", href: "/", dateCreated: "5/16/2025"},
-]
 
 export default function DashboardPage () {
     return (
@@ -55,7 +41,7 @@ export default function DashboardPage () {
                 </div>
                 <div className="justify-center">
                     <div className="flex flex-col gap-3 lg:grid lg:grid-cols-3 3xl:grid-cols-4">
-                        {folders.map(folder => {
+                        {promptFolders.map(folder => {
                             return (
                                 <Link
                                     key={folder.name}
@@ -83,7 +69,7 @@ export default function DashboardPage () {
                             disabled
                             hidden
                             className='text-gray-400'>Select a Sorting Option</option>
-                        {options.map(options => {
+                        {sortOptions.map(options => {
                             return (
                                 <option
                                     value={options.value}

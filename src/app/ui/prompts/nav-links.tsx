@@ -1,24 +1,10 @@
 "use client"
 
-import {
-    HomeIcon,
-    ArrowTrendingUpIcon,
-    ShareIcon,
-    BeakerIcon,
-} from '@heroicons/react/24/outline';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
+import { sideNavLinks } from '@/app/lib/data'
 
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
-
-const links = [
-    {name: 'My Prompts', href: '/prompts', icon: HomeIcon},
-    {name: 'Shared Prompts', href: '/prompts/shared', icon: ShareIcon},
-    {name: 'Trending Prompts', href: '/prompts/trending', icon: ArrowTrendingUpIcon},
-    {name: 'Test Prompts', href: '/prompts/tests', icon: BeakerIcon},
-];
 
 export default function NavLinks() {
 
@@ -26,7 +12,7 @@ export default function NavLinks() {
 
     return (
         <>
-            {links.map(link => {
+            {sideNavLinks.map(link => {
                 const LinkIcon = link.icon;
                 return (
                     <Link

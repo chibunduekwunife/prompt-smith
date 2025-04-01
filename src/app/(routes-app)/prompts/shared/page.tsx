@@ -1,7 +1,7 @@
 export default function AccountPage() {
     return (
         <div>
-            View Account Page
+            <p>View All Shared Prompts</p>
         </div>
     )
 }
