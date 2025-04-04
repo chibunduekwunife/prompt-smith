@@ -10,7 +10,8 @@ export default function NavBar () {
     const pathname = usePathname();
 
     return (
-        <div className='flex flex-row p-4 bg-gradient-to-r from-purple-600 to-purple-900 gap-2 items-center'>
+        <nav className='flex flex-row p-4 bg-gradient-to-r from-purple-600 to-purple-900 gap-2 items-center
+        sticky top-0'>
             <Link
                 href="/">
                 <PromptSmithLogo logoStyles='text-purple-600' textStyles='hidden md:flex' />
@@ -35,6 +36,6 @@ export default function NavBar () {
                     )
                 })}
             </div>
-        </div>
+        </nav>
     )
 }

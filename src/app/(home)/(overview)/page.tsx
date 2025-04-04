@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-      <div>
+      <div className="h-screen">
           {/*hero*/}
           <div className='flex flex-col items-center'>
 
@@ -56,7 +56,7 @@ export default function Home() {
                       </p>
                   </div>
                   <Link
-                      href="/chrome"
+                      href="/prompts"
                       className="flex flex-row gap-2 text-purple-600 items-center mt-6 md:mt-8 px-6
                   py-3 bg-transparent border-2 border-solid border-purple-600 font-bold text-sm
                   md:text-lg rounded-md hover:border-purple-600 hover:bg-purple-600 hover:text-white

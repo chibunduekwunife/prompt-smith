@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import NavLinks from '@/app/ui/prompts/nav-links'
 import { PowerIcon } from '@heroicons/react/24/outline';
-// import { signOut } from '@/config/auth'
+// import { signOut } from '@/api/auth'
 import PromptSmithLogo from '@/app/ui/ps-logo'
 
 export default function SideNav() {

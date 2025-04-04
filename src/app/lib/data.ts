@@ -1,7 +1,9 @@
 import {
     AcademicCapIcon,
     CurrencyDollarIcon,
-    UserCircleIcon
+    UserCircleIcon,
+    PhoneArrowDownLeftIcon,
+    EnvelopeIcon
 } from "@heroicons/react/24/solid";
 
 import {
@@ -11,16 +13,52 @@ import {
     ShareIcon
 } from "@heroicons/react/24/outline";
 
+import {
+    FaFacebook,
+    FaLinkedin,
+    FaTwitterSquare,
+    FaInstagramSquare
+} from "react-icons/fa";
 //move to database
 
 export const navLinks = [
     {name: 'About', href: '/about', icon: AcademicCapIcon},
     {name: 'Affiliates', href: '/affiliates', icon: CurrencyDollarIcon},
-    {name: 'login', href: '/prompts', icon: UserCircleIcon}
+    {name: 'login', href: '/login', icon: UserCircleIcon}
 ]
 
 export const footerLinks = [
+    [
+        {name: 'About Us', href: '/about'},
+        {name: 'More Search', href: '/search'},
+        {name: 'Blog', href: '/blog'},
+        {name: 'Testimonials', href: '/testimonials'},
+        {name: 'Events', href: 'Events'}
+    ],
+    [
+        {name: 'Services', href: '/services'},
+        {name: 'Supports', href: '/support'},
+        {name: 'Terms & Conditions', href: '/terms'},
+        {name: 'Privacy Policy', href: '/privacy-policy'},
+    ],
+    [
+        {name: 'Brands List', href: '/'},
+        {name: 'AI Packages', href: '/'},
+        {name: 'Affiliates', href: '/affiliates'},
+        {name: 'Blog', href: '/blog'},
+        {name: 'Testimonials', href: '/testimonials'},
+    ],
+    [
+        {name: 'phone-number', href: '/phone', value: '+91 9999 999 999', icon: PhoneArrowDownLeftIcon },
+        {name: 'email', href: '/email', value: 'support@promptsmith.com', icon: EnvelopeIcon}
+    ]
+]
 
+export const socialLinks = [
+    {name: 'facebook', href: '/facebook', icon: FaFacebook},
+    {name: 'linkedin', href: '/linkedin', icon: FaLinkedin},
+    {name: 'twitter', href: '/twitter', icon: FaTwitterSquare},
+    {name: 'instagram', href: '/instagram', icon: FaInstagramSquare}
 ]
 
 // auth?.prompts page
